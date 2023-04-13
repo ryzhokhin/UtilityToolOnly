@@ -1,0 +1,42 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}
+    tool
+{% endblock%}
+
+{% block content %}
+    <!--"Zinli", "Wise", "AdvCash", "ABA", "Zelle", "Utopia", "AirTM", "Perfect Money", "Payeer",-->
+<center>
+<div class="container">
+    <form action="">
+        <h1>Form</h1>
+        <label>
+            <input type="text" class="budget" id="budget" value="1000">
+        </label>
+        <br>
+        <input onclick="test_1()" id="Zinli" type="button" value="Zinli" class="button">
+        <input onclick="test_2()" id="Wise" type="button" value="Wise" class="button">
+        <input onclick="test_3()" id="AdvCash" type="button" value="AdvCash" class="button">
+            <br>
+        <input onclick="test_4()" id="ABA" type="button" value="ABA" class="button">
+        <input onclick="test_5()" id="Zelle" type="button" value="Zelle" class="button">
+        <input onclick="test_6()" id="Utopia" type="button" value="Utopia" class="button">
+            <br>
+        <input onclick="test_7()" id="AirTM" type="button" value="AirTM" class="button">
+        <input onclick="test_8()" id="Perfect Money" type="button" value="Perfect Money" class="button">
+        <input onclick="test_9()" id="Payeer" type="button" value="Payeer" class="button">
+            <br>
+        <select name="select" class="select" id="select">
+            <option value="1">UAH</option>
+            <option value="2">USDT</option>
+            <option value="3">Zalupa1</option>
+            <option value="4">zalupa2</option>
+            <option value="5">penis</option>
+        </select>
+            <br>
+        <input type="button" value="submit" class="button" onclick="on_submit()">
+    </form>
+</div>
+</center>
+{% endblock%}
+

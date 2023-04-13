@@ -1,0 +1,30 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}
+    registration
+{% endblock%}
+
+{% block content %}
+
+    <div class=" registration-form ">
+        <header class="reg-form-header">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
+            <h1 class="reg-form-header-title">Registration</h1>
+        </header>
+        <form method="post" class="">
+
+            {% csrf_token %}
+            {{ form.email }}</br>
+            {{ form.nickname }}</br>
+            {{ form.password }}</br>
+            <span>{{ error }}</span>
+            <button class = "btn btn-success btn-form-reg" type="submit"> Submit</button>
+        </form>
+    </div>
+
+{% endblock%}
+
+<!--email = models.CharField('Email', max_length=50)-->
+<!--    nickname = models.CharField('Nickname', max_length=50)-->
+<!--    password = models.CharField('Password', max_length=100)-->
+<!--    registrationDate = models.DateField('Registration Date')-->

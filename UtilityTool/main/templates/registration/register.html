@@ -1,0 +1,15 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}
+    tool
+{% endblock%}
+
+{% block content %}
+<h1>Register</h1>
+    <form action="{% url 'registerNewUser' %}}">
+    {{ form }}
+        {% csrf_token %}
+    <button type="submit" class="btn btn-success">Register</button>
+    </form>
+
+{% endblock %}

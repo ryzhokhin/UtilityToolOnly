@@ -6,7 +6,9 @@
 
 {% block content %}
     <!--"Zinli", "Wise", "AdvCash", "ABA", "Zelle", "Utopia", "AirTM", "Perfect Money", "Payeer",-->
-<center>
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}">Logout</a>
+        <center>
 <div class="container">
     <form action="">
         <h1>Form</h1>
@@ -38,5 +40,10 @@
     </form>
 </div>
 </center>
+    {% else %}
+        <a href="{% url 'login' %}">Login</a> | <a href="{% url 'registerNewUser' %}">Registration (actual)</a>
+<!--    {% url 'login' %}-->
+    {% endif %}
+
 {% endblock%}
 

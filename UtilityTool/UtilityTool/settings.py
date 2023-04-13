@@ -26,13 +26,15 @@ SECRET_KEY = 'django-insecure-s*^e&go!j1z3yhlpjrlf-yvv#9znlod(!5)iu*mag=0h09fu17
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
+AUTH_USER_MODEL = 'users.User'
+LOGIN_REDIRECT_URL = 'tool'
+LOGOUT_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
     'main',
     'usertool',
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

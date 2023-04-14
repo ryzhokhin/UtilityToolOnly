@@ -30,6 +30,10 @@ AUTH_USER_MODEL = 'user.User'
 LOGIN_REDIRECT_URL = '/tool'
 LOGOUT_REDIRECT_URL = '/'
 
+# Change for official deploy:
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
 # Application definition
 
 INSTALLED_APPS = [

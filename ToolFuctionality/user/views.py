@@ -15,6 +15,8 @@ from user.forms import UserCreationForm
 #
 # def registerUser(request):
 #     return render(request, 'user/registration.html')
+def openUser(request):
+    return redirect('main')
 
 class Register(View):
     template_name = 'registration/register.html'

@@ -1,0 +1,204 @@
+<form action="{% url 'toolForm' %}" class="tool-form" method="post">
+  {% csrf_token %}
+<div class="input-group mb-3">
+  <span class="input-group-text">💰</span>
+  <input type="text" name="budget" placeholder="Budget" class="budget form-control">
+</div>
+   <hr>
+
+  <div class="list">
+    <div class="form-element">
+      <input type="checkbox" name="Zinli" value="Zinli" id="Zinli">
+      <label for="Zinli">
+        <div class="title">
+          Zinli
+        </div>
+      </label>
+    </div>
+    <div class="form-element">
+      <input type="checkbox" name="Wise" value="Wise" id="Wise">
+      <label for="Wise">
+        <div class="title">
+          Wise
+        </div>
+      </label>
+    </div>
+    <div class="form-element">
+      <input type="checkbox" name="AdvCash" value="AdvCash" id="AdvCash">
+      <label for="AdvCash">
+        <div class="title">
+          AdvCash
+        </div>
+      </label>
+    </div>
+    <div class="form-element">
+      <input type="checkbox" name="ABA" value="ABA" id="ABA">
+      <label for="ABA">
+        <div class="title">
+          ABA
+        </div>
+      </label>
+    </div>
+    <div class="form-element">
+      <input type="checkbox" name="Zelle" value="Zelle" id="Zelle">
+      <label for="Zelle">
+        <div class="title">
+          Zelle
+        </div>
+      </label>
+    </div>
+    <div class="form-element">
+      <input type="checkbox" name="Utopia" value="Utopia" id="Utopia">
+      <label for="Utopia">
+       <div class="title">
+          Utopia
+        </div>
+      </label>
+    </div>
+    <div class="form-element">
+      <input type="checkbox" name="AirTM" value="AirTM" id="AirTM">
+      <label for="AirTM">
+        <div class="title">
+          AirTM
+        </div>
+      </label>
+    </div>
+    <div class="form-element">
+      <input type="checkbox" name="Perfect_Money" value="Perfect_Money" id="Perfect_Money">
+      <label for="Perfect_Money">
+        <div class="title">
+          Perfect Money
+        </div>
+      </label>
+    </div>
+    <div class="form-element">
+      <input type="checkbox" name="Payeer" value="Payeer" id="Payeer">
+      <label for="Payeer">
+        <div class="title">
+          Payeer
+        </div>
+      </label>
+    </div>
+    <div class="form-element">
+      <input type="checkbox" name="Skrill" value="Skrill" id="Skrill">
+      <label for="Skrill">
+        <div class="title">
+          Skrill
+        </div>
+      </label>
+    </div>
+    <div class="form-element">
+      <input type="checkbox" name="Monobank" value="Monobank" id="Monobank">
+      <label for="Monobank">
+        <div class="title">
+          Monobank
+        </div>
+      </label>
+    </div>
+  </div>
+<br >
+  <hr>
+
+  <select name="currency" class="form-select form-select-md mb-3" id="currency">
+    <option value="UAH">UAH</option>
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="AED">AED</option>
+  </select>
+  <button type="submit" class="btn btn-outline-light btn-lg">Search</button>
+</form>
+
+
+<style type="text/css">
+  .tool-form{
+    background-color: #3d3d3d;
+    max-width: 700px;
+    border-radius: 20px;
+    padding: 2%;
+  }
+
+  .container h2 {
+  font-size:25px;
+  color:#888;
+  text-align:center;
+}
+.container .list {
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  max-width:100%;
+  text-align:center;
+}
+.form-element {
+  text-align:center;
+  position:relative;
+  width:140px;
+  height:50px;
+}
+.form-element input {
+  display:none;
+}
+.form-element label {
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  height:100%;
+  cursor:pointer;
+  border:2px solid #ddd;
+  background:#fff;
+  box-shadow:0px 5px 20px 2px rgba(0,0,0,0.1);
+  text-align:center;
+  transition:all 200ms ease-in-out;
+  border-radius:15px;
+}
+.form-element .icon {
+
+}
+.form-element .title {
+  font-size:15px;
+  color:#555;
+  padding:5px 0px;
+  transition:all 200ms ease-in-out;
+}
+.form-element label:before {
+  content:"✓";
+  position:absolute;
+  width:18px;
+  height:18px;
+  top:8px;
+  left:8px;
+  background:black;
+  color:#fff;
+  text-align:center;
+  line-height:18px;
+  font-size:14px;
+  font-weight:600;
+  border-radius:50%;
+  opacity:0;
+  transform:scale(0.5);
+  transition:all 200ms ease-in-out;
+}
+.form-element input:checked + label:before {
+  opacity:1;
+  transform:scale(1);
+}
+.form-element input:checked + label .icon {
+  color:black;
+}
+.form-element input:checked + label .title {
+  color:black;
+}
+.form-element input:checked + label {
+  border:2px solid black;
+}
+.budget{
+  width: 100%;
+  color: black;
+}
+
+
+</style>

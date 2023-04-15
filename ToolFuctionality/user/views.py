@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django. contrib.auth import login, authenticate
 from django.views import View
-
+from django.http import HttpResponse
 from user.forms import UserCreationForm
+
+
 
 
 # Create your views here.
@@ -17,6 +19,25 @@ from user.forms import UserCreationForm
 #     return render(request, 'user/registration.html')
 def openUser(request):
     return redirect('main')
+
+def loginUser(request):
+    return redirect('login')
+
+def toolFormOperation(request):
+    USER_CREATED_FORM = request
+    return HttpResponse(USER_CREATED_FORM)
+    # Zinli = request.POST['Zinli']
+    # Wise = request.POST['Wise']
+    # AdvCash = request.POST['AdvCash']
+    # ABA = request.POST['ABA']
+    # Zelle = request.POST['Zelle']
+    # Utopia = request.POST['Utopia']
+    # AirTM = request.POST['AirTM']
+    # Perfect_Money = request.POST['Perfect_Money']
+    # Payeer = request.POST['Payeer']
+    # Skrill = request.POST['Skrill']
+    # Monobank = request.POST['Monobank']
+    # return HttpResponse("hello ✡️")
 
 class Register(View):
     template_name = 'registration/register.html'

@@ -4,7 +4,9 @@ from django.views import View
 from django.http import HttpResponse
 from user.forms import UserCreationForm
 
+from script_for_tool.toolAlgorithm import Algorythm
 
+from script_for_tool.toolAlgorithm import view_on_web
 
 
 # Create your views here.
@@ -20,12 +22,13 @@ from user.forms import UserCreationForm
 def openUser(request):
     return redirect('main')
 
-def loginUser(request):
-    return redirect('login')
+# def loginUser(request):
+#     return redirect('login')
 
 def toolFormOperation(request):
-    USER_CREATED_FORM = request
-    return HttpResponse(USER_CREATED_FORM)
+    USER_CREATED_FORM = request.POST
+    return view_on_web(request)
+    # return HttpResponse(USER_CREATED_FORM)
     # Zinli = request.POST['Zinli']
     # Wise = request.POST['Wise']
     # AdvCash = request.POST['AdvCash']

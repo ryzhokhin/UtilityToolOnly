@@ -2,7 +2,7 @@
   {% csrf_token %}
 <div class="input-group mb-3">
   <span class="input-group-text">💰</span>
-  <input type="text" name="budget" placeholder="Budget" class="budget form-control">
+  <input type="text" name="budget" placeholder="Budget" class="budget form-control" required>
 </div>
    <hr>
 
@@ -99,7 +99,7 @@
 <br >
   <hr>
 
-  <select name="currency" class="form-select form-select-md mb-3" id="currency">
+  <select name="currency" class="form-select form-select-md mb-3" id="currency" required>
     <option value="UAH">UAH</option>
     <option value="USD">USD</option>
     <option value="EUR">EUR</option>
